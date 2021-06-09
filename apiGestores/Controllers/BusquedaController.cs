@@ -50,8 +50,10 @@ namespace apiGestores.Controllers
         [HttpPost]
         public ActionResult Post([FromBody]Busqueda_Bd busqueda)
         {
+            
             try
             {
+                busqueda.fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 context.registros_bd.Add(busqueda);
                 context.SaveChanges();
                 return CreatedAtRoute("GetBusqueda", new { id = busqueda.id }, busqueda);

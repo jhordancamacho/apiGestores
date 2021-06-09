@@ -12,6 +12,6 @@ namespace apiGestores.Models
         public int id { get; set; }
 
         public string ciudad { get; set; }
-        public DateTime fecha { get; set; }
+        public string fecha { get; set; }
     }
 }
